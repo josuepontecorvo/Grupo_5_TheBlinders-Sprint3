@@ -418,6 +418,11 @@ footer {
 
     section.products-filter form.products-filter-hidden {
         padding-left: 30px;
+        width: 450px;
+    }
+
+    section.products-filter label.products-filter-title {
+        width: 400px;
     }
 
     main .products-list-container {
@@ -493,6 +498,10 @@ footer {
         padding: 10px 0;
     }
 
+    section.products-filter label.products-filter-title {
+        width: 90%;
+    }
+
     section.products-filter label.products-filter-title i {
         display: none;
     }
@@ -505,6 +514,7 @@ footer {
         position: static;
         background-image: none;
         opacity: 1;
+        width: 90%;
     }
 
         /*PRODUCTS*/
