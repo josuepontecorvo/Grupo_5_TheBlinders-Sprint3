@@ -12,7 +12,7 @@ controller = {
         res.render('products/productDetail', {product})
     },
     create: (req,res) => res.render('products/productCreate'),
-    edit: (req,res) => res.render('products/productCreate'),
+    edit: (req,res) => res.render('products/productEdit'),
 };
 
 module.exports = controller;

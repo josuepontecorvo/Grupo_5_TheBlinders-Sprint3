@@ -210,6 +210,17 @@ main .detail-container .detail-column-2 {
     transition: all 0.7s;
 }
 
+.detail-column-2 .edit-button {
+    width: 50%;
+    margin-top: 10px;
+    background-color: #fa4500;
+    padding: 5px;
+    color:white;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.7s;
+}
+
 .detail-column-2 button:hover {
     background-color: white;
     color:#fa4500;
