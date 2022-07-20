@@ -12,7 +12,11 @@ controller = {
         res.render('products/productDetail', {product})
     },
     create: (req,res) => res.render('products/productCreate'),
-    edit: (req,res) => res.render('products/productEdit'),
+    edit: (req,res) => { 
+        const id = +req.params.id;
+        const product = products.find( product => product.id == id);  
+        res.render('products/productEdit',{product});
+    },
 };
 
 module.exports = controller;
