@@ -9,13 +9,8 @@
     <%- include('../partials/header.ejs') %> 
     <main>
         <div class="CRUD">
-            <h2>ABM Productos</h2>
-            <form class="edit-control" action="/productos/editar" method="GET">
-                <label class="id-label" for="id">Id: </label>
-                <input type="number" name="id" id="id"/>
-                <button type="submit">Buscar</button>    
-                <button type="submit">Nuevo</button>
-            </form>
+            <h2>Crear Producto</h2>
+            
             <form action="/productos" method="GET" class="CRUD-form">
                 <div class="form-control">
                     <label class="input-label">Producto:</label>
