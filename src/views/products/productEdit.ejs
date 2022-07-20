@@ -14,8 +14,13 @@
             <form action="/productos" method="GET" class="CRUD-form">
                 <div class="form-control">
                     <label class="input-label">Producto:</label>
-                    <label class="radio-label" for="bicicletas"><input type="radio" name="product" value="bicicletas" id="bicicletas">Bicicletas</label>
-                    <label class="radio-label" for="accesorios"><input type="radio" name="product" value="accesorios" id="accesorios">Accesorios</label>
+                    <% if (product.product == "bicicletas") { %>
+                        <label class="radio-label" for="bicicletas"><input type="radio" name="product" value="bicicletas" id="bicicletas" checked>Bicicletas</label>
+                        <label class="radio-label" for="accesorios"><input type="radio" name="product" value="accesorios" id="accesorios">Accesorios</label>
+                    <% } else { %>
+                        <label class="radio-label" for="bicicletas"><input type="radio" name="product" value="bicicletas" id="bicicletas">Bicicletas</label>
+                        <label class="radio-label" for="accesorios"><input type="radio" name="product" value="accesorios" id="accesorios" checked>Accesorios</label>
+                    <% } %>
                     <span class="feedback"></span>
                 </div>
                 <diV class="form-control">
@@ -30,7 +35,7 @@
                 </diV>
                 <div class="form-control">
                     <label class="input-label" for="product-image">Carga la foto del producto</label>
-                    <input class="file" type="file" name="image" id="product-image"  accept=".jpg, .png" />
+                    <input class="file" type="file" name="image" id="product-image"  accept=".jpg, .png, .jpeg" value="<%= product.image %>"/>
                     <span class="feedback"></span>
                 </div>
                 <div class="form-control">
@@ -95,7 +100,7 @@
                 </diV>
                 <diV class="form-control">
                     <label class="input-label" for="info">Info Adicional:</label>
-                    <textarea name="info" id="info" cols="30" rows="10"></textarea>
+                    <textarea name="info" id="info" cols="30" rows="10" ><%= product.info %></textarea>
                     <span class="feedback"></span>
                 </diV>
                 <div class="submit-form">
